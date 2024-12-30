@@ -1,0 +1,14 @@
+{% extends 'cores/base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ job.title }}</h1>
+      <p>{{ job.show_description }}</p>
+      <p>{{ job.long_description }}</p>
+      <p>{{ job.created_by }}</p>
+      <p>{{ job.created_at }}</p>
+      <p>{{ job.changed_at }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

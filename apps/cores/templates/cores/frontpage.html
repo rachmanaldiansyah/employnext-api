@@ -1,4 +1,31 @@
 {% extends 'cores/base.html' %} {% block content %}
-<h1>Welcome to EmployNext</h1>
-<p>Find your next job here</p>
+<h2 class="subtitle has-text-centered">Pekerjaan Terbaru</h2>
+<div class="columns is-multiline">
+  {% if jobs %} {% for job in jobs %}
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{ job.title }}</p>
+            <p class="subtitle is-6">{{ job.show_description }}</p>
+          </div>
+        </div>
+        <div class="content">
+          {{ job.long_description }}
+          <br />
+          <time datetime="{{ job.created_by }}">{{ job.created_at }}</time>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a class="card-footer-item" href="{% url 'job_detail' job.id %}"
+          >View</a
+        >
+      </footer>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <p class="has-text-centered">Tidak ada pekerjaan terbaru...</p>
+  {% endif %}
+</div>
 {% endblock %}

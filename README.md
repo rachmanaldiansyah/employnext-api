@@ -2,36 +2,13 @@
 
 ## Deskripsi Proyek
 
-EmployNext API adalah sebuah proyek yang dibangun menggunakan Django untuk menyediakan layanan backend bagi aplikasi manajemen karyawan. API ini memungkinkan pengguna untuk mengelola data karyawan, termasuk menambah, mengedit, dan menghapus informasi karyawan.
+EmployNext API adalah sebuah proyek yang dibangun menggunakan Django untuk menyediakan layanan backend bagi aplikasi job board. API ini memungkinkan pengguna untuk mengelola data karyawan, termasuk menambah, mengedit, dan menghapus informasi karyawan.
 
 ## Teknologi yang Digunakan
 
-- Python 3.x
-- Django 3.x
-- Django REST framework
-- PostgreSQL
-
-## Struktur Folder
-
-```
-employnext-api/
-├── employnext/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── asgi.py
-├── employees/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── serializers.py
-│   ├── tests.py
-│   └── views.py
-├── manage.py
-└── requirements.txt
-```
+- Python 3.10.11
+- Django 5.1.4
+- SQLite
 
 ## Cara Menjalankan Proyek di Lokal
 
