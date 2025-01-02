@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Custom apps
     'apps.cores',
     'apps.jobs',
+    'apps.userprofile',
 ]
 
 MIDDLEWARE = [

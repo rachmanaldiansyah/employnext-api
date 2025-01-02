@@ -1,0 +1,20 @@
+{% extends 'cores/base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Dashboard</h1>
+
+      {% if userprofile.is_employer %}
+      <h2 class="subtitle">Jobs</h2>
+      {% for job in request.user.jobs.all %}
+      <div class="job">
+        <h3>{{ job.title }}</h3>
+        <p>{{ job.description }}</p>
+      </div>
+      {% empty %}
+      <p>You don't have any jobs yet...</p>
+      {% endfor %} {% else %} Is Jobseeker {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
