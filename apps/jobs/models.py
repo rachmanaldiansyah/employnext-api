@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class Job(models.Model):
     title = models.CharField(max_length=100)
-    show_description = models.TextField()
+    short_description = models.TextField()
     long_description = models.TextField(blank=True, null=True)
 
     created_by = models.ForeignKey(User, related_name='jobs', on_delete=models.CASCADE)
